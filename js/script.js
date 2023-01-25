@@ -23,7 +23,7 @@ btnSubmit.addEventListener("click", () => {
         }
     })
     if (counter === 5) {
-        return alert("You need to choose an option!")
+        return alert("You have to rate me between 1 and 5!")
     }
 });
 

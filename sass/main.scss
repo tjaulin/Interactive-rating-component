@@ -115,14 +115,23 @@ body {
         padding: 5px 15px;
         background-color: #252d37;
         border-radius: 9999px;
+        @media screen and (max-width: 426px) {
+            font-size: 12px;
+        }
     }
 
     .container__newTitle {
         margin: 15px 0 5px 0;
+        @media screen and (max-width: 426px) {
+            font-size: x-large;
+        }
     }
 
     .container__divParagraph {
         font-size: $primary-fontsize;
         color: #7c8798;
+        @media screen and (max-width: 426px) {
+            font-size: 12px;
+        }
     }
 }

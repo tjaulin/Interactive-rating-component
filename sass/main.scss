@@ -31,7 +31,7 @@ body {
     color:#fff;
     border-radius: 15px;
     padding: 30px;
-    width: 346px;
+    width: 366px;
     @media screen and (max-width: 426px) {
         width: 296px;
         padding: 25px;
@@ -133,5 +133,28 @@ body {
         @media screen and (max-width: 426px) {
             font-size: 12px;
         }
+    }
+}
+
+// --------- ATTRIBUTION -----------
+.attribution {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: $primary-fontsize;
+    a {
+        text-decoration: none;
+        color: $primary-color;
+        cursor: pointer;
+        transition: color 0.3s;
+        &:hover {
+            color: darken($primary-color, 10);
+        }
+    }
+    @media screen and (max-width: 426px) {
+        font-size: 12px;
     }
 }

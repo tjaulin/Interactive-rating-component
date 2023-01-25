@@ -65,14 +65,14 @@ body {
             @include background-circle(0);
             width: 44px;
             height: 44px;
-            line-height: 44px;
+            line-height: 47px;
             text-align: center;
             cursor: pointer;
             transition: background-color 0.3s;
             @media screen and (max-width: 426px) {
                 width: 34px;
                 height: 34px;
-                line-height: 34px;
+                line-height: 37px;
             }
             &:hover {
                 background-color: $primary-color;

@@ -1,0 +1,101 @@
+// ---------- GENERAL -------------
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$primary-color: #fb7413;
+$primary-fontsize: 15px;
+
+body {
+    width: auto;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+    background-color: #0e1012;
+}
+
+// ---------- CONTAINER -----------
+
+@mixin background-circle($padding: 13px) {
+    background: hsl(213, 19%, 18%);
+    padding: $padding;
+    border-radius: 50%;
+}
+
+.container {
+    background: linear-gradient(hsl(213, 19%, 18%), hsl(216, 12%, 8%));
+    color:#fff;
+    border-radius: 15px;
+    padding: 30px;
+    width: 346px;
+    @media screen and (max-width: 426px) {
+        width: 296px;
+        padding: 25px;
+    }
+    .container__icon img {
+        @include background-circle();
+    }
+    .container__title {
+        margin-top: 15px;
+        @media screen and (max-width: 426px) {
+            font-size: x-large;
+        }
+    }
+    .container__paragraph {
+        font-size: $primary-fontsize;
+        color:hsl(216, 12%, 54%);
+        margin-top: 5px;
+        @media screen and (max-width: 426px) {
+            font-size: 12px;
+        }
+    }
+    .container__rateus {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: 30px 0;
+        color:hsl(216, 12%, 54%);
+        user-select: none;
+        li {
+            @include background-circle(0);
+            width: 44px;
+            height: 44px;
+            line-height: 44px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            &:hover {
+                background-color: $primary-color;
+                color: #fff;
+            }
+        }
+        .active {
+            background-color: hsl(216, 12%, 54%);
+            color: #fff;
+        }
+    }
+    .container__btn {
+        outline: none;
+        border: none;
+        user-select: none;
+        cursor: pointer;
+        width: 100%;
+        background-color: $primary-color;
+        text-transform: uppercase;
+        border-radius: 9999px;
+        padding: 15px 0;
+        color: #fff;
+        font-weight: 700;
+        letter-spacing: 2px;
+        transition: background-color 0.3s;
+        &:hover {
+            background-color: #fff;
+            color: $primary-color;
+        }
+    }
+}

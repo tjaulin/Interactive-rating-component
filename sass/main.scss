@@ -21,7 +21,7 @@ body {
 // ---------- CONTAINER -----------
 
 @mixin background-circle($padding: 13px) {
-    background: hsl(213, 19%, 18%);
+    background: #252d37;
     padding: $padding;
     border-radius: 50%;
 }
@@ -69,6 +69,11 @@ body {
             text-align: center;
             cursor: pointer;
             transition: background-color 0.3s;
+            @media screen and (max-width: 426px) {
+                width: 34px;
+                height: 34px;
+                line-height: 34px;
+            }
             &:hover {
                 background-color: $primary-color;
                 color: #fff;
@@ -97,5 +102,27 @@ body {
             background-color: #fff;
             color: $primary-color;
         }
+    }
+    // --------- AFTER RATING ----------
+    .container__newIcon {
+        margin: 20px 0;
+    }
+
+    .container__rating {
+        display: inline;
+        color: $primary-color;
+        font-size: $primary-fontsize;
+        padding: 5px 15px;
+        background-color: #252d37;
+        border-radius: 9999px;
+    }
+
+    .container__newTitle {
+        margin: 15px 0 5px 0;
+    }
+
+    .container__divParagraph {
+        font-size: $primary-fontsize;
+        color: #7c8798;
     }
 }
